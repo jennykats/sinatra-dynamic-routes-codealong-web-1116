@@ -8,8 +8,8 @@ class App < Sinatra::Base
   end
 
   get '/multiply/:num1/:num2' do
-    @added = "25"
-    @added
+    added = params[:num1].to_i * params[:num2].to_i
+    added.to_s
   end
 
   # This is a sample static route.
